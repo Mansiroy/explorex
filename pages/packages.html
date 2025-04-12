@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Packages</title>
+  <link rel="stylesheet" href="package.css" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+  <section class="package" id="package">
+    <div class="container">
+      <p class="section-subtitle">Popular Packages</p>
+      <h1 class="section-title">Checkout Our Packages</h1>
+      <p class="section-text">
+        Discover exciting travel packages for every kind of explorer.
+        Whether it's mountains, beaches, or cities — your next adventure starts here.
+      </p>
+
+      <ul class="package-list">
+        <li>
+          <div class="package-card">
+            <figure class="card-banner">
+              <img src="assets/beach.jpeg" alt="Experience The Great Holiday On Beach" loading="lazy" />
+            </figure>
+
+            <div class="card-content">
+              <h3 class="card-title">Experience The Great Holiday On Beach</h3>
+              <p class="card-text">
+                Soak up the sun, feel the breeze, and let the waves wash your worries away.
+                Discover the perfect escape where relaxation meets adventure.
+              </p>
+
+              <ul class="card-meta-list">
+                <li class="meta-box">
+                  <ion-icon name="time"></ion-icon>
+                  <span>3D/2N</span>
+                </li>
+                <li class="meta-box">
+                  <ion-icon name="people"></ion-icon>
+                  <span>pax: 10</span>
+                </li>
+                <li class="meta-box">
+                  <ion-icon name="location"></ion-icon>
+                  <span>Goa</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-price">
+              <p class="reviews">(47 reviews)</p>
+              <div class="card-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="price">₹7000 <span>/ per person</span></p>
+              <a target="_blank" class="btn">Book Now</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <button class="btn-primary" id="loadMoreBtn">View All Packages</button>
+    </div>
+  </section>
+
+  <script src="package.js"></script>
+</body>
+</html>
