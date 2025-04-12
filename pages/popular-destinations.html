@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popular Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="destination.css" />
+</head>
+<body>
+
+  <!-- Navbar Start -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">ExploreX</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Navbar End -->
+
+  <section class="popular-section">
+    <span class="section-subtitle">UNCOVER PLACE</span>
+    <h2 class="section-title">POPULAR DESTINATION</h2>
+    <p class="section-description">
+      Discover breathtaking getaways on our site, where every place promises a unique and unforgettable adventure — perfect for planning your next escape.
+    </p>
+    
+    <div class="destinations-grid">
+      <div class="destination-card">
+        <img src="./assets/beach.jpeg" alt="GOA BEACH" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">INDIA</span>
+          <h3 class="card-place">GOA</h3>
+          <p class="card-description">
+            Goa is a beautiful coastal state in India, famous for its beaches, nightlife, seafood, and Portuguese-influenced architecture. It’s a top travel destination for relaxation and adventure.
+          </p>
+        </div>
+      </div>
+      
+      <div class="destination-card">
+        <img src="./assets/cul.jpg" alt="Burj Khalifa" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">INDIA</span>
+          <h3 class="card-place">RAJASTHAN</h3>
+          <p class="card-description">
+            Rajasthan is known for its rich cultural heritage, featuring majestic forts, royal palaces, traditional music and dance, vibrant festivals, and colorful attire that reflect its royal history and desert charm.
+          </p>
+        </div>
+      </div>
+      
+      <div class="destination-card">
+        <img src="./assets/red.jpg" alt="Kyoto Temple" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">INDIA</span>
+          <h3 class="card-place">RED FORT</h3>
+          <p class="card-description">
+            The Red Fort is a historic Mughal fort in Delhi, known for its grand architecture, red sandstone walls, and as a symbol of India's rich heritage and independence.
+          </p>
+        </div>
+      </div>
+
+      <!-- New Destination Cards -->
+      <div class="destination-card">
+        <img src="./assets/taj.jpeg" alt="Taj Mahal" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">INDIA</span>
+          <h3 class="card-place">TAJ MAHAL</h3>
+          <p class="card-description">
+            Experience the timeless beauty of the Taj Mahal, an ivory-white marble mausoleum that stands as a symbol of eternal love.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="./assets/tow.jpg" alt="Eiffel Tower" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">FRANCE</span>
+          <h3 class="card-place">EIFFEL TOWER</h3>
+          <p class="card-description">
+            Behold the iconic Eiffel Tower, Paris's most recognizable landmark offering breathtaking views of the City of Lights.
+          </p>
+        </div>
+      </div>
+
+      <div class="destination-card">
+        <img src="./assets/wall.jpg" alt="Great Wall" class="card-image" />
+        <div class="card-content">
+          <span class="card-country">CHINA</span>
+          <h3 class="card-place">GREAT WALL</h3>
+          <p class="card-description">
+            Walk along the ancient Great Wall of China, a monumental feat of engineering stretching across mountains and valleys.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <a href="#" class="btn-more">EVEN MORE DESTINATIONS</a>
+  </section>
+
+  <script>
+    // JavaScript to handle "More Destinations" click
+    document.querySelector('.btn-more').addEventListener('click', function(e) {
+      e.preventDefault();
+      const hiddenCards = document.querySelectorAll('.destination-card:nth-child(n+4)');
+      hiddenCards.forEach(card => {
+        card.style.display = 'block';
+      });
+      this.style.display = 'none';
+    });
+
+    // Initially hide the additional cards (4-6) for the "more" effect
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.destination-card');
+      for (let i = 3; i < cards.length; i++) {
+        cards[i].style.display = 'none';
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
