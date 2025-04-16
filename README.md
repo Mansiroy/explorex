@@ -145,3 +145,24 @@ Feel free to use, modify, and share for educational purposes.
 ---
 
 Made with ❤️ by Team ExploreX
+
+
+<script>
+        // JavaScript to handle "More Destinations" click
+        document.querySelector('.btn-more').addEventListener('click', function (e) {
+            e.preventDefault();
+            const hiddenCards = document.querySelectorAll('.destination-card:nth-child(n+4)');
+            hiddenCards.forEach(card => {
+                card.style.display = 'block';
+            });
+            this.style.display = 'none';
+        });
+
+        // Initially hide the additional cards (4-6) for the "more" effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.destination-card');
+            for (let i = 3; i < cards.length; i++) {
+                cards[i].style.display = 'none';
+            }
+        });
+    </script>
